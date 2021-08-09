@@ -240,6 +240,6 @@ const loop = async () => {
     await sleep(1000);
     while (true) {
         loop();
-        await sleep(100);
+        await sleep(500);
     }
 })();
