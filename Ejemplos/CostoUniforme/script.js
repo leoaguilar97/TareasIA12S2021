@@ -6,11 +6,13 @@ function inc() {
 
 function sucesores(n) {
     if (n[0] == 'A')
-        return [['B', n[1] + 2, inc()], ['C', n[1] + 3, inc()], ['D', n[1] + 4, inc()]]
+        return [['B', n[1] + 4, inc()], ['C', n[1] + 1, inc()], ['E', n[1] + 3, inc()]]
     if (n[0] == 'B')
-        return [['D', n[1] + 3, inc()], ['C', n[1] + 1, inc()]]
+        return [['A', n[1] + 4, inc()], ['D', n[1] + 5, inc()], ['E', n[1] + 2, inc()]]
     if (n[0] == 'C')
-        return [['B', n[1] + 1, inc()], ['D', n[1] + 2, inc()]]
+        return [['A', n[1] + 1, inc()], ['D', n[1] + 3, inc()], ['E', n[1] + 2, inc()]]
+    if (n[0] == 'E')
+        return [['A', n[1] + 3, inc()], ['C', n[1] + 2, inc()], ['B', n[1] + 2, inc()], ['D', n[1] + 1, inc()]]
     if (n[0] == 'D')
         return []
 }
